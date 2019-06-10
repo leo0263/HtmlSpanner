@@ -1,3 +1,17 @@
+# Updates
+
+I'm updating the codebase because of this main reason:
+
+  - the available latest version from https://github.com/NightWhistler/HtmlSpanner is v 0.4, which is way behind the master branch
+  - that version is buggy, the `<strong>` and `<em>` tag handler switched places
+  - I need the latest version of this HtmlSpanner available online for gradle dependencies
+  
+So I forked the code to add a jitpack.io required plugins (which require me to also update this project gradle/plugin version).
+
+## Usages
+
+Update the dependencies to this repo: https://jitpack.io/#leo0263/HtmlSpanner
+
 # Android HTML rendering library
 
 HtmlSpanner started as the HTML rendering library for PageTurner, but looking through some questions on StackOverflow I noticed how many people were struggling with the infamous ``Html.fromHtml()`` and getting its results to display properly in TextViews.
