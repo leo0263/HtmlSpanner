@@ -121,7 +121,7 @@ public class TableHandler extends TagNodeHandler {
                 table.addRow();
             }
 
-            for (Object child : tagNode.getAllChildren()) {
+            for (Object child : tagNode.getChildren()) {
                 readNode(child, table);
             }
         }

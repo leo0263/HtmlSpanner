@@ -48,7 +48,7 @@ public class PreHandler extends TagNodeHandler {
 
 		} else if (node instanceof TagNode) {
 			TagNode tagNode = (TagNode) node;
-			for (Object child : tagNode.getAllChildren()) {
+			for (Object child : tagNode.getChildren()) {
 				getPlainText(buffer, child);
 			}
 		}

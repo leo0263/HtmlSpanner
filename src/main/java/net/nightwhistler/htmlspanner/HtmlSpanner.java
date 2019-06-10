@@ -331,7 +331,7 @@ public class HtmlSpanner {
 
         if ( !handler.rendersContent() ) {
 
-            for (Object childNode : node.getAllChildren()) {
+            for (Object childNode : node.getChildren()) {
 
                 if ( childNode instanceof ContentNode ) {
                     handleContent( builder, childNode, stack, cancellationCallback );
