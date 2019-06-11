@@ -331,7 +331,7 @@ public class HtmlSpanner {
 
         if ( !handler.rendersContent() ) {
 
-            for (Object childNode : node.getAllChildren()) {
+            for (Object childNode : node.getChildren()) {
 
                 if ( childNode instanceof ContentNode ) {
                     handleContent( builder, childNode, stack, cancellationCallback );
@@ -366,10 +366,16 @@ public class HtmlSpanner {
         registerHandler("b", boldHandler);
         registerHandler("strong", boldHandler);
 
+        TagNodeHandler blockQuoteHandler =  new StyledTextHandler(
+                new Style()
+                        .setFontStyle(Style.FontStyle.ITALIC)
+                        .setMarginLeft(new StyleValue(2.0f, StyleValue.Unit.EM)));
+
+        registerHandler("blockquote", blockQuoteHandler);
+
         TagNodeHandler marginHandler = new StyledTextHandler(
                 new Style().setMarginLeft(new StyleValue(2.0f, StyleValue.Unit.EM)));
 
-        registerHandler("blockquote", marginHandler);
         registerHandler("ul", marginHandler);
         registerHandler("ol", marginHandler);
 

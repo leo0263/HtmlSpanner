@@ -20,11 +20,11 @@ public class StyleNodeHandler extends TagNodeHandler {
 
         if ( getSpanner().isAllowStyling() ) {
 
-            if ( node.getAllChildren().size() == 1 ) {
-                Object childNode = node.getAllChildren().get(0);
+            if ( node.getChildren().size() == 1 ) {
+                Object childNode = node.getChildren().get(0);
 
                 if ( childNode instanceof ContentNode ) {
-                    parseCSSFromText( ( (ContentNode) childNode ).getContent(),
+                    parseCSSFromText( ( (ContentNode) childNode ).getContent().toString(),
                             spanStack );
                 }
             }
