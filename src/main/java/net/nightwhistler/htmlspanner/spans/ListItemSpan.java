@@ -67,9 +67,9 @@ public class ListItemSpan implements LeadingMarginSpan {
             p.setStyle(Paint.Style.FILL);
 
             if (mNumber != -1) {
-                c.drawText(mNumber + ".", x + dir, baseline, p);
+                c.drawText(mNumber + "." + " ", x + dir, baseline, p);
             } else {
-                c.drawText("\u2022", x + dir, baseline, p);
+                c.drawText("\u2022" + " ", x + dir, baseline, p);
             }
 
             p.setStyle(style);
