@@ -23,7 +23,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'net.sourceforge.htmlcleaner:htmlcleaner:2.16'
+    implementation 'net.sourceforge.htmlcleaner:htmlcleaner:2.22'
     implementation 'com.osbcp.cssparser:cssparser:1.5'
 }
 
